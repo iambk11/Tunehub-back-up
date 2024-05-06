@@ -1,0 +1,49 @@
+/* Overall Page Styling */
+body {
+    font-family: 'Open Sans', sans-serif; /* New font family for a fresh look */
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0; /* Light gray background for the entire page */
+}
+
+/* Container for the main content */
+.container {
+    max-width: 500px; /* Maximum width of the container */
+    margin: 60px auto; /* Centering with a top margin */
+    padding: 30px; /* Padding for inner spacing */
+    background-color: gray; /* White background for contrast */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Styling for forms */
+form {
+    text-align: center; /* Center the form content */
+    margin-bottom: 20px; /* Space between forms */
+}
+
+/* Button styling for form submit */
+input[type="submit"] {
+    background-color: #ff5722; /* Bright orange for a more vibrant look */
+    color: white; /* White text for contrast */
+    padding: 12px 24px; /* Larger padding for a prominent button */
+    border: none; /* No border for cleaner design */
+    border-radius: 6px; /* Slightly rounded corners for the button */
+    font-size: 1.1em; /* Slightly larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+/* Hover effects for buttons */
+input[type="submit"]:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Optional header styling */
+h1 {
+    text-align: center; /* Center the header */
+    font-size: 2em; /* Larger font size for emphasis */
+    color: #1ED760; /* Dark gray for contrast against the white background */
+    margin-bottom: 30px; /* Space below the header */
+}

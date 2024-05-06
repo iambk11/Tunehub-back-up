@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="pay.css">
+<title>Payment</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+	<div>
+
+		<h2>Why premium ?</h2>
+		<p>Taking subscription to our Tune Hub music application has various advantages. Here's why it might be a good choice for users:</p>
+
+<p>1. Access to Premium Content: Subscription-based music apps often offer a vast library of premium content, including exclusive tracks, albums, playlists, and more.</p>
+<p>2. Ad-Free Experience: Subscriptions typically provide an ad-free listening experience, allowing you to enjoy music without interruptions.</p>
+<p>3. Offline Listening: Many music subscriptions allow you to download songs or playlists for offline listening, which is great for traveling or when you're in areas with limited connectivity.</p>
+<p>4. High-Quality Audio: Subscriptions often grant access to high-quality audio streams, providing a richer listening experience compared to free or basic versions.</p>
+<p>5. Custom Playlists and Recommendations: Subscriptions often include personalized playlists, recommendations based on your listening habits, and other advanced features like curated playlists.</p>
+<p>6. Multi-Device Access: With a subscription, you typically get seamless access across multiple devices, like smartphones, tablets, and smart speakers, making it easier to enjoy music anywhere.</p>
+<p>7. Support for Artists and Creators: Subscriptions generally contribute to revenue streams for artists and music creators, helping to support their work.</p>
+<p>8. Exclusive Features and Content: Subscribers often get access to exclusive content, early releases, concerts, or special events.</p>
+<p>These are some of the key reasons why people choose to subscribe to music applications. If your music app offers these benefits, promoting them can encourage users to consider a subscription.</p>
+ 
+ 
+    <form id="payment-form">
+			<button type="submit" class="buy-button">BUY</button>
+		</form>
+
+	</div>
+
+	<script>
+$(document).ready(function() {
+    $(".buy-button").click(function(e) {
+        e.preventDefault();
+        var form = $(this).closest('form');
+        
+        
+        createOrder();
+    });
+});
+
+function createOrder() {
+	
+    $.post("/createOrder")
+        .done(function(order) {
+            order = JSON.parse(order);
+            var options = {
+                "key": "rzp_test_DCkc7SCutrNtFU",
+                "amount": order.amount_due.toString(),
+                "currency": "INR",
+                "name": "Tune Hub",
+                "description": "Test Transaction",
+                "order_id": order.id,
+                "handler": function (response) {
+                    verifyPayment(response.razorpay_order_id, response.razorpay_payment_id, response.razorpay_signature);
+                },
+                "prefill": {
+                    "name": "Your Name",
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+                },
+                "notes": {
+                    "address": "Your Address"
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        })
+        .fail(function(error) {
+            console.error("Error:", error);
+        });
+}
+
+function verifyPayment(orderId, paymentId, signature) {
+     $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
+         .done(function(isValid) {
+             if (isValid) {
+             	alert("Payment successful");
+             	window.location.href='payment-success';
+             } else {
+                 alert("Payment failed");
+                 window.location.href='payment-failure';
+             }
+         })
+         .fail(function(error) {
+             console.error("Error:", error);
+         });
+}
+</script>
+</body>
+</html>

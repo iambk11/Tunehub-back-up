@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+
+/* Overall Page Styling */
+body {
+    font-family: 'Futura PT', sans-serif; /* Using Google Fonts */
+    margin: 1;
+    padding: 1;
+    background-color: #e0e0e0; /* Soft gray background */
+}
+
+/* Container for Navigation */
+.container {
+    max-width: 600px; /* Limit content width */
+    margin: 20px auto; /* Center content */
+    padding: 20px;
+    background-color: gray;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: black; /* Soft shadow */
+}
+
+/* Navigation Styling */
+
+.navigation {
+    list-style: none; /* Remove list bullets */
+    padding: 5;
+}
+
+.navigation li {
+    margin: 10px 0; /* Spacing between items */
+}
+
+.navigation form {
+    text-decoration: none; /* Remove underline */
+    background-color: light green; /* Primary color */
+    color: black; /* Text color */
+    padding: 10px 10px; /* Padding around text */
+    border-radius: 10px; /* Slightly rounded corners */
+    font-weight: 700; /* Bold text */
+    display: inline-block; /* Allow margin and padding to work */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.navigation form:hover {
+    
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+    
+}
+
+/* Header Styling */
+h1 {
+    font-size: 1.5em; /* Larger header font */
+    text-align: center; /* Centered text */
+    color: green; /* Dark gray color */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center; /* Centered text */
+    margin-top: 20px;
+    color: black; /* Light gray color */
+    font-size: 0.9em; /* Slightly smaller text */
+}
+input[type="submit"] {
+    background-color: #ff5722; /* Bright orange for a more vibrant look */
+    color: white; /* White text for contrast */
+    padding: 12px 24px; /* Larger padding for a prominent button */
+    border: none; /* No border for cleaner design */
+    border-radius: 6px; /* Slightly rounded corners for the button */
+    font-size: 1.1em; /* Slightly larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+input[type="submit"]:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+

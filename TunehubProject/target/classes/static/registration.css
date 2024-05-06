@@ -1,0 +1,81 @@
+/* Gray background for the entire page */
+body {
+  background-color: #f0f0f0; /* Light gray color */
+  font-family: Arial, sans-serif; /* Consistent font across the page */
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Centering and styling the wrapper */
+.wrapper {
+  max-width: 600px; /* Restricting the width of the form */
+  margin: auto; /* Centers the form horizontally */
+  padding: 20px; /* Adds padding around the form */
+  background-color: gray; /* White background for the form */
+  border: 1px solid #ddd; /* Light gray border for definition */
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Styling the form */
+form {
+  display: flex;
+  flex-direction: column; /* Stacks form elements vertically */
+  gap: 20px; /* Adds space between form elements */
+}
+
+/* Styling the input boxes with icons */
+.input-box {
+  position: relative; /* Positioning to add icons within the box */
+}
+
+.input-box input {
+  width: 100%; /* Input takes full width of the parent container */
+  padding: 10px 10px 10px 10px; /* Padding: more on the right for icon space */
+  border: 1px solid #ccc; /* Light gray border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  transition: 0.2s; /* Smooth transition on hover and focus */
+}
+
+.input-box input:focus {
+  border-color: #333; /* Darker border on focus */
+}
+
+/* Positioning the icons within the input box */
+.input-box i {
+  position: absolute;
+  right: 10px; /* Aligns icon to the right */
+  top: 10px; /* Vertical alignment for the icon */
+  color: #aaa; /* Light gray color for the icon */
+}
+
+/* Styling the table */
+table {
+  width: 100%; /* Table takes full width of the parent */
+  border-collapse: collapse; /* Cleaner table appearance */
+}
+
+td {
+  padding: 10px; /* Padding for table cells */
+}
+
+/* Styling the submit button */
+.btn {
+  padding: 10px 20px; /* Button padding */
+  background-color: #333; /* Dark gray background for the button */
+  color: white; /* White text on the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: 0.2s; /* Smooth transition on hover */
+}
+
+.btn:hover {
+  background-color: #555; /* Slightly lighter gray on hover */
+}
+h1 {
+    text-align: center; /* Center the header */
+    font-size: 2em; /* Larger font size for emphasis */
+    color:  #1ED760; /* Dark gray for contrast against the white background */
+    margin-bottom: 30px; /* Space below the header */
+}
+

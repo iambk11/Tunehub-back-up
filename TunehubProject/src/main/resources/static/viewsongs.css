@@ -1,0 +1,68 @@
+@charset "ISO-8859-1";
+/* Reset basic styles to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Use a clean and easy-to-read font */
+    background-color:  #e0e0e0; /* Soft background color */
+    padding: 20px; /* Add some padding around the content */
+}
+
+/* Center and style the table */
+table {
+    width: 100%; /* Set table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Merge borders for a cleaner look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: gray; /* White background */
+    border-radius: 8px; /* Round the corners */
+    overflow: hidden; /* Clip overflow for rounded corners */
+}
+
+/* Style table headers */
+thead {
+    background-color: #007bff; /* Use a blue header */
+    color: white; /* White text for contrast */
+}
+
+/* Style the table header rows */
+thead tr th {
+    padding: 12px; /* Add padding to table headers */
+    text-align: left; /* Left-align text in table headers */
+}
+
+/* Style table body rows */
+tbody tr {
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Highlight rows on hover */
+tbody tr:hover {
+    background-color: orange; /* Light gray on hover */
+}
+
+/* Style table body cells */
+tbody tr td {
+    padding: 12px; /* Add padding to table cells */
+    border-bottom: 1px solid #e0e0e0; /* Light border between rows */
+}
+
+/* Styling for the audio controls in the Play column */
+audio {
+    width: 1000%; /* Ensure audio controls take full width */
+    outline: none; /* Remove default outline */
+    border-radius: 4px; /* Slightly rounded corners for audio controls */
+}
+h2 {
+    font-size: 24px; /* Larger font size for header */
+    text-align: center; /* Center-align the header text */
+    margin-bottom: 20px;
+    color:#1ED760 /* Space between header and form fields */
+}
+

@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+
+/* Basic reset to ensure consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif; /* Clean, legible font */
+    background-color: #e0e0e0; /* Light background color */
+    color: #333; /* Standard text color */
+    padding: 20px; /* Space around the page */
+}
+
+/* Center the content */
+h2, form {
+    text-align: center; /* Center-align content */
+}
+
+/* Header styling */
+h2 {
+    font-size: 24px; /* Larger font size for header */
+    text-align: center; /* Center-align the header text */
+    margin-bottom: 20px;
+    color:#1ED760; /* Space between header and form fields */
+    
+    
+}
+
+/* Form styling */
+form {
+    max-width: 400px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px; /* Add padding inside the form */
+    background-color: gray; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Label styling */
+label {
+    display: inline-block; /* Keep labels with inputs */
+    font-weight: bold; /* Bold font for labels */
+    margin-bottom: 10px; /* Space between label and input */
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%; /* Full-width input fields */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between input fields */
+    transition: border-color 0.3s; /* Smooth transition on focus */
+}
+
+/* Highlight input field on focus */
+input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline on focus */
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 8px; /* Space between checkbox and label */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%; /* Full-width submit button */
+    padding: 12px; /* Additional padding */
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Bold font for submit */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Change background color on hover for submit button */
+input[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Ensure spacing between checkboxes */
+div {
+    margin-bottom: 10px; /* Space between checkboxes */
+}
